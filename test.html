@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Test PrintCopyright() function</title>
+
+	<style>
+		table {
+	    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	    border-collapse: collapse;
+	    /*width: 100%;*/
+	}
+
+	table td, table th {
+	    border: 1px solid #ddd;
+	    padding: 8px;
+	}
+
+	table tr:nth-child(even){background-color: #f2f2f2;}
+
+	table tr:hover {background-color: #ddd;}
+
+	table th {
+	    padding-top: 12px;
+	    padding-bottom: 12px;
+	    text-align: left;
+	    /*background-color: #4CAF50;*/
+	    background-color: darkgrey;
+	    color: white;
+	}
+</style>
+
+	<!-- Load PrintCopyright.min.js in the header for best performance //-->
+	<script type="text/javascript" src="PrintCopyright.min.js"></script>
+
+</head>
+
+<body>
+	<h1>Testing of Javascript PrintCopyright() function</h1>
+	<p>Below are different return values that show the use and error handling of the function.</p>
+
+	<table>
+		<caption>Correct Function Usage</caption>
+		<tr>
+			<th>function call</th>
+			<th>function output</th>
+		</tr>
+		<tr>
+			<td>PrintCopyright(2015, " Johan Vranckx");</td>
+			<td>
+				<script type="text/javascript">
+					PrintCopyright(2015, " Johan Vranckx");
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<script type="text/javascript">
+					var TestYear = (new Date()).getFullYear();
+				</script>PrintCopyright(<script type="text/javascript">
+					document.write(TestYear);
+				</script>, " Johan Vranckx");
+			</td>
+			<td>
+				<script type="text/javascript">
+					PrintCopyright(TestYear, " Johan Vranckx");
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td>PrintCopyright(2018, " Johan Vranckx", " License CC-BY-NC-ND 4.0.");</td>
+			<td>
+				<script type="text/javascript">
+					PrintCopyright(2018, " Johan Vranckx", " License CC-BY-NC-ND 4.0.");
+				</script>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<table>
+		<caption>Error Handling</caption>
+		<tr>
+			<th>function call</th>
+			<th>function output</th>
+		</tr>
+		<tr>
+			<td>PrintCopyright();</td>
+			<td>
+				<script type="text/javascript">
+					PrintCopyright();
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td>PrintCopyright(2015);</td>
+			<td>
+				<script type="text/javascript">
+					PrintCopyright(2015);
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td>PrintCopyright(2015, Johan Vranckx);</td>
+			<td>
+				<script type="text/javascript">
+					PrintCopyright(2015, Johan Vranckx);
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td>PrintCopyright(-1, " Johan Vranckx");</td>
+			<td>
+				<script type="text/javascript">
+					PrintCopyright(-1, " Johan Vranckx");
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td>PrintCopyright(2015.1, " Johan Vranckx");</td>
+			<td>
+				<script type="text/javascript">
+					PrintCopyright(2015.1, " Johan Vranckx");
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td>PrintCopyright(2019, " Johan Vranckx");</td>
+			<td>
+				<script type="text/javascript">
+					PrintCopyright(2019, " Johan Vranckx");
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td>PrintCopyright(" Johan Vranckx", 2015);</td>
+			<td>
+				<script type="text/javascript">
+					PrintCopyright(" Johan Vranckx", 2015);
+				</script>
+			</td>
+		</tr>
+	</table>
+
+
+	<p>
+
+	</p>
+</body>
+
+</html>
